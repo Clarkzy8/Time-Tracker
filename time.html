@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flatpickr Example</title>
+
+  <!-- Flatpickr CSS -->
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/dark.css">
+
 </head>
 <body>
-    <h1>Time Entry</h1>
 
-    <div>
-        <input class="date-picker" type="date">
-    </div>
+  <h1>Pick a Date</h1>
 
+  <button id="openPicker">Pick a Date</button>
+  <input type="text" id="dateInput" style="display: none;" />
+
+  <p id="selectedDate"></p>
+
+  <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+  <script>
+    // Initialize flatpickr
+    const picker = flatpickr("#dateInput", {
+      onChange: function(selectedDates, dateStr, instance) {
+        document.getElementById("selectedDate").textContent = "You selected: " + dateStr;
+      }
+    });
+
+    // Open the picker on button click
+    document.getElementById("openPicker").addEventListener("click", () => {
+      picker.open();
+    });
+  </script>
     <script src="/navbar.js"></script>
     <nav-bar id="navbar-containter"></nav-bar>
 </body>
