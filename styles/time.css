@@ -1,0 +1,96 @@
+
+
+.date-container {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    background-color: rgb(235, 235, 235);
+    padding: 0.2rem;
+    border-radius: 50rem;
+    margin-bottom: 5rem;
+    max-width: 510px;
+    box-shadow: 1px 1px 10px #cbcbcb, -10px -10px 20px #ffffff;
+}
+
+#date__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.icon-btn {
+    width: 2rem;
+    height: 2rem;
+}
+
+.date-container__date {
+    margin: 0 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.date-container button {
+    background-color: transparent;
+    border: none;
+}
+
+.time-container {
+    justify-self: center;
+}
+
+/* Full-width toggle container */
+.page-toggle {
+  display: flex;
+  width: 100%;
+  background: #eee;
+  border-bottom: 2px solid #ccc;
+}
+
+/* Buttons span equally */
+.page-toggle .tab {
+  flex: 1;
+  padding: 1rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background 0.2s;
+}
+
+.page-toggle .tab:hover {
+  background: #ddd;
+}
+
+/* Active tab style */
+.page-toggle .tab.active {
+  background: #4caf50;
+  color: white;
+}
+
+/* Pages */
+.pages .page {
+  display: none;
+  padding: 2rem;
+}
+
+.pages .page.active {
+  display: block;
+}
+
+.time-selector {
+  display: flex;
+  flex-direction: row;
+}
+
+.time-selector__start {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}
+
+.time-selector__end {
+  display: flex;
+  flex-direction: row;
+  padding: 10px;
+}

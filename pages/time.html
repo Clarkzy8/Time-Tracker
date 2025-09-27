@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="/styles/styles.css">
+  <link rel="stylesheet" href="/styles/time.css">
+  <script defer src="/scripts/time.js"></script>
+  <script src="/scripts/scripts.js"></script>
+  <title>Time</title>
+</head>
+<body>
+    <div class="date-container">
+        <button onclick="changeDay(-1)">
+            <img src="/images/chevron-l.svg" alt="-1 Day" class="icon-btn">
+        </button>
+        <button onclick="changeDay(-7)">
+            <img src="/images/chevron-ll.svg" alt="-1 Month" class="icon-btn">
+        </button>
+        <button onclick="resetDate()" id="date__button">
+            <h3 id="date" class="date-container__date"></h3>
+        </button>
+        <button onclick="changeDay(7)">
+            <img src="/images/chevron-rr.svg" alt="+1 Day" class="icon-btn">
+        </button>
+        <button onclick="changeDay(1)">
+            <img src="/images/chevron-r.svg" alt="+1 Month" class="icon-btn">
+        </button>
+    </div>
+    <div class="time-container">
+        <div class="page-toggle">
+            <button class="tab active" data-target="page1">Option 1</button>
+            <button class="tab" data-target="page2">Option 2</button>
+        </div>
+
+        <div class="pages">
+            <div class="page" id="page1">
+                
+            </div>
+            <div class="page" id="page2">
+                <div class="time-selector">
+                    <div class="time-selector__start">
+                        <p>Start time:</p>
+                        <input type="time">
+                    </div>
+                    <div class="time-selector__end">
+                        <p>End time:</p>
+                        <input type="time">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+
+  <script src="/navbar/navbar.js"></script>
+  <nav id="navbar-container"></nav>
+</body>
+</html>
